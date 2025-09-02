@@ -1,0 +1,124 @@
+/* src/components/modal/Modal.module.css */
+
+/* ===== 오버레이(백드롭) 영역 ===== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg-dim);
+    z-index: 9999;
+}
+
+/* ===== 모달 패널(실제 카드) ===== */
+.panel {
+    width: min(500px, 90vw);
+    padding: 30px;
+    border: none;
+    border-radius: var(--radius-2);
+    background: var(--bg-1);
+    box-shadow: var(--shadow-1);
+    outline: none;
+}
+
+/* ===== 접근성: 키보드 포커스 링 ===== */
+.panel:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+}
+
+/* ===== 헤더(제목/바로가기 안내) ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 20px;
+    padding-block-end: 10px;
+    border-bottom: 1px solid var(--line-1);
+}
+
+/* 제목 텍스트 스타일 */
+.title {
+    margin: 0;
+    font-size: 18px;
+    color: var(--fg-1);
+}
+
+/* 우측 단축키 안내(ESC/Enter) */
+.shortcuts {
+    font-size: 11px;
+    color: var(--fg-3);
+}
+
+/* ===== 본문 영역 ===== */
+.body {
+    margin-block-end: 20px;
+    line-height: 1.5;
+}
+
+/* 본문 내 문단 공통 스타일 */
+.body p {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: var(--fg-1);
+}
+
+/* ===== 액션(버튼 모음) ===== */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 하단 힌트(외부 클릭/ESC 안내) */
+.hint {
+    margin-block-start: 15px;
+    padding-block-start: 10px;
+    text-align: center;
+    color: var(--fg-3);
+    border-top: 1px solid var(--line-1);
+}
+
+/* ===== 버튼: 공통 베이스 ===== */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-1);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+/* ===== 변형: 확인 버튼 (data-variant="confirm") ===== */
+.button[data-variant="confirm"] {
+    background-color: var(--success);
+    color: #fff;
+}
+
+.button[data-variant="confirm"]:hover {
+    background-color: var(--success-hover);
+}
+
+/* ===== 변형: 취소 버튼 (data-variant="cancel") ===== */
+.button[data-variant="cancel"] {
+    background-color: var(--danger);
+    color: #fff;
+}
+
+.button[data-variant="cancel"]:hover {
+    background-color: var(--danger-hover);
+}
+
+/* ===== 상태: 로딩 (data-state="loading") ===== */
+.button[data-state="loading"] {
+    background-color: var(--warn);
+    color: var(--dark);
+    cursor: not-allowed;
+}
+
+/* ===== 모션 환경 배려 ===== */
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+    }
+}
