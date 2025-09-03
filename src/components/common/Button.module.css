@@ -1,0 +1,77 @@
+/* ===== 버튼 베이스 ===== */
+.button {
+  padding: var(--space-3) var(--space-5);
+  border: none;
+  border-radius: var(--radius-1);
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+/* ===== 변형: 기본(primary) ===== */
+.button[data-variant="primary"] {
+  background-color: var(--primary);
+}
+.button[data-variant="primary"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ===== 변형: 성공(success) ===== */
+.button[data-variant="success"] {
+  background-color: var(--success);
+}
+.button[data-variant="success"]:hover {
+  background-color: var(--success-hover);
+}
+
+/* ===== 변형: 위험(danger) ===== */
+.button[data-variant="danger"] {
+  background-color: var(--danger);
+}
+.button[data-variant="danger"]:hover {
+  background-color: var(--danger-hover);
+}
+
+/* ===== 변형: 확인(confirm) ===== */
+.button[data-variant="confirm"] {
+  background-color: var(--success);
+  color: #fff;
+}
+.button[data-variant="confirm"]:hover {
+  background-color: var(--success-hover);
+}
+
+/* ===== 변형: 취소(cancel) ===== */
+.button[data-variant="cancel"] {
+  background-color: var(--danger);
+  color: #fff;
+}
+.button[data-variant="cancel"]:hover {
+  background-color: var(--danger-hover);
+}
+
+/* ===== 상태: 활성(active) ===== */
+.button[data-state="active"] {
+  background-color: var(--danger);
+}
+
+/* ===== 상태: 로딩(loading) ===== */
+.button[data-state="loading"] {
+  background-color: var(--warn);
+  color: var(--dark);
+  cursor: not-allowed;
+}
+
+/* ===== 키보드 접근성: 포커스 표시 ===== */
+.button:focus-visible {
+  outline: 2px solid var(--primary-hover);
+  outline-offset: 2px;
+}
+
+/* ===== 모션 환경 배려 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

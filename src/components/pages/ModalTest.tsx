@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useModal } from 'hook/useModal';
+import Button from 'components/common/Button';
 import styles from 'App.module.css';
 
 const ModalTest = () => {
@@ -45,46 +46,41 @@ const ModalTest = () => {
       <h2>Modal Demo</h2>
       <p>{result}</p>
 
-      <div className={styles.buttonGroup}>
-        <button
-          className={styles.button}
-          data-variant="primary"
+      <div className="buttonGroup">
+        <Button
+          variant="primary"
           onClick={handleBasicModal}
         >
           기본 type의 모달
-        </button>
+        </Button>
 
-        <button
-          className={styles.button}
-          data-variant="primary"
+        <Button
+          variant="primary"
           onClick={handleDisabledOutsideClick}
         >
           외부클릭 비활성화
-        </button>
+        </Button>
 
-        <button
-          className={styles.button}
-          data-variant="primary"
+        <Button
+          variant="primary"
           onClick={handleDisabledKeyboard}
         >
           키보드 비활성화
-        </button>
+        </Button>
 
-        <button
-          className={styles.button}
-          data-variant="success"
+        <Button
+          variant="success"
           onClick={handleAlertModal}
         >
           알림 모달 (취소버튼 없음)
-        </button>
+        </Button>
 
-        <button
-          className={styles.button}
-          data-variant="danger"
+        <Button
+          variant="danger"
           onClick={handleFullyDisabled}
         >
           모든 기능 비활성화
-        </button>
+        </Button>
       </div>
     </div>
   );

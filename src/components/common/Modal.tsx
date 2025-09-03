@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useOutsideClick } from 'hook/useOutsideClick';
 import { keyPress } from 'utils/keyPress';
+import Button from './Button';
 import styles from './Modal.module.css';
 
 interface ModalProps {
@@ -101,25 +102,23 @@ function Modal({
         </section>
   
         <footer className={styles.actions}>
-          <button
-            className={styles.button}
-            data-variant="confirm"
-            data-state={loadingConfirm ? 'loading' : undefined}
+          <Button
+            variant="confirm"
+            state={loadingConfirm ? 'loading' : undefined}
             onClick={loadingConfirm ? undefined : (onConfirm ?? undefined)}
             autoFocus
             disabled={loadingConfirm}
           >
             {loadingConfirm ? '처리 중...' : '확인'}
-          </button>
+          </Button>
   
           {showCancelButton && (
-            <button
-              className={styles.button}
-              data-variant="cancel"
+            <Button
+              variant="cancel"
               onClick={onCancel ?? undefined}
             >
               취소
-            </button>
+            </Button>
           )}
         </footer>
   
