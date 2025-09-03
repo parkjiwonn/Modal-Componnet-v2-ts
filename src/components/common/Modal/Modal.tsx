@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useOutsideClick } from 'hook/useOutsideClick';
 import { keyPress } from 'utils/keyPress';
-import Button from './Button';
+import Button from '../Button/Button';
 import styles from './Modal.module.css';
 
 interface ModalProps {

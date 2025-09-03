@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.module.css';
 import 'components/common/index.css';
 import { ModalProvider } from 'hook/useModal';
 import TestPage from 'components/pages/TestPage';

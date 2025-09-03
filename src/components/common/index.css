@@ -1,40 +1,49 @@
 /* ===== 공통 컴포넌트 스타일 ===== */
 
-/* 버튼 그룹 */
-.buttonGroup {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  margin-block: var(--space-4);
-}
-
-/* 액션 버튼 그룹 (모달용) */
-.actions {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-/* 외부 클릭 데모 컨테이너 */
-.outsideClickDemo {
-  display: inline-block;
-  position: relative;
-  margin: var(--space-3);
-}
-
-/* 테스트 섹션 */
-.testSection {
-  display: block;
-  margin-block: var(--space-5);
-  padding: var(--space-5);
-  border: 1px solid var(--line-1);
-  border-radius: var(--radius-2);
-  background-color: var(--bg-1);
-  box-shadow: var(--shadow-1); 
-}
-
-.testSection h2 {
-  margin: 0 0 var(--space-4) 0;
-  color: var(--fg-1);
-}
+/* 앱 레이아웃 */
+.app {
+    display: block;
+    min-height: 100vh;
+    padding: var(--space-5);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 버튼 그룹 */
+  .buttonGroup {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-block: var(--space-4);
+  }
+  
+  /* 액션 버튼 그룹 (모달용) */
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* 외부 클릭 데모 컨테이너 */
+  .outsideClickDemo {
+    display: inline-block;
+    position: relative;
+    margin: var(--space-3);
+  }
+  
+  /* 테스트 섹션 */
+  .testSection {
+    display: block;
+    margin-block: var(--space-5);
+    padding: var(--space-5);
+    border: 1px solid var(--line-1);
+    border-radius: var(--radius-2);
+    background-color: var(--bg-1);
+    box-shadow: var(--shadow-1); 
+  }
+  
+  .testSection h2 {
+    margin: 0 0 var(--space-4) 0;
+    color: var(--fg-1);
+  }

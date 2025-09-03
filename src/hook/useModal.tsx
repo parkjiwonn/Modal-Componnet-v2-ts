@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useCallback, ReactNode } from "react";
-import Modal from 'components/common/Modal';
+import Modal from 'components/common/Modal/Modal';
 
 interface ModalOptions {
     enableOutsideClick?: boolean;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useModal } from 'hook/useModal';
-import Button from 'components/common/Button';
-import styles from 'App.module.css';
+import Button from 'components/common/Button/Button';
 
 const ModalTest = () => {
   const { confirm, alert } = useModal();
@@ -42,7 +41,7 @@ const ModalTest = () => {
   };
 
   return (
-    <div className={styles.testSection}>
+    <div className="testSection">
       <h2>Modal Demo</h2>
       <p>{result}</p>
 
